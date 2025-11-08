@@ -87,6 +87,26 @@ p {
   font-size: 1rem;
   text-align: justify;
 }
+/*======Photo======*/
+.profile-photo {
+  text-align: end;
+  margin: 10px 0;
+}
+
+.profile-photo img {
+  width: 180px;           /* adjust as you like */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;     /* makes it round */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
 
 /* ===== Адаптация под мобильные устройства ===== */
 @media (max-width: 768px) {
