@@ -31,7 +31,8 @@ Maria Alistratova - Portfolio Task
 > - The different features of your site, e.g. if you have hover states, take a screenshot that shows that.  
 > 
 > You can do this by saving the images in a folder in your repo, and including them in your readme document with the following Markdown code: 
-![First web page](First page.jpg)
+
+![First web page](./img/First_page.jpg)
 
 ####  image_title_goes_here 
 ![Put a description of your image here](./relative_path_to_file)
