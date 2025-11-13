@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --brand: #44d1de;
+  --action: #d5f3eb;
+  --white: #ffffff;
+  --base-light: #b5dfdf;
+  --base-dark: #333333;
+  --black: #111111;
+}
+
 /* ===== General settings ===== */
 * {
   margin: 0;
@@ -78,7 +88,7 @@ h1 {
    margin-bottom: 20px;
 }
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   color: #434141;
    margin-bottom: 20px;
 }
@@ -169,7 +179,6 @@ p {
 }
 
 .contact-form h2 {
-  color: var(--base-dark);
   margin-bottom: 16px;
 }
 
@@ -243,4 +252,53 @@ footer {
       margin-left: 20px;
       margin-right: 20px;
   }
+}
+/*======Second page========*/
+.projects-container {
+  margin-top: 120px;   /* работает и на мобильных, и на десктопах */
+}
+/* btn-primary */
+ .btn-primary {
+   display: inline-block;
+   padding: 12px 16px;
+   text-decoration: none;
+   color: var(--base-dark);
+   border-radius: 6px;
+   text-decoration: none;  /* убирает подчеркивание */
+   background-color: var(--action);
+   transition: all 0.3s ease;
+   text-align: center;
+   margin: 0 auto; /* центрирует кнопку */
+ }
+ 
+ .btn-primary:hover {
+   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+   transform: translateY(-4px);
+ }
+/* .projects-container  */
+@media (min-width: 768px) {
+  .projects-container {
+    display: flex;
+    margin-top: 120px;
+    
+  }
+}
+
+article {
+  padding: 20px 16px;
+  background-color: var(--base-light);
+  border-radius: 10px;
+  margin: 5px 10px;
+  transition: all 0.3s ease;
+  text-align: center; /* center the button */
+}
+
+@media (min-width: 768px) {
+  article {
+      padding: 56px;
+  }
+}
+
+article:hover {
+  filter: contrast(150%);
 }
