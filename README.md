@@ -5,12 +5,8 @@ Maria Alistratova -
 ## Project Requirements
 
 ### Content
- Add a short paragraph describing the features below. What aesthetic and technical choices did you make? 
-- [ ] At least one profile picture
-- [ ] Biography (at least 100 words)
-- [ ] Functional Contact Form
-- [ ] "Projects" section
-- [ ] Links to external sites, e.g. GitHub and LinkedIn.
+
+My website features a personal profile with a photograph and a brief biography, an interactive contact form, and a dedicated projects page showcasing my work through individual project cards. It also includes direct links to my GitHub, Facebook, LinkedIn, and Instagram profiles.
 ​
 ### Technical
  Add a short paragraph describing the features below. What strategies or design decisions did you work from? 
@@ -19,6 +15,7 @@ Maria Alistratova -
 - [ ] Deployed on GitHub pages.
 - [ ] Implements responsive design principles.
 - [ ] Uses semantic HTML.
+The website is built using semantic HTML and consists of two separate pages. Throughout the development process, I maintained version control by regularly committing changes to GitHub. The site is deployed using GitHub Pages. The codebase is written with responsiveness in mind, ensuring that all elements display correctly on both desktop and mobile devices.
 
 ### Bonus (optional)
  Add a short paragraph describing the features below, if you included any. 
