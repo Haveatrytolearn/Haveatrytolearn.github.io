@@ -1,6 +1,6 @@
-Maria Alistratova - Portfolio Task
+Maria Alistratova - 
 ​
-My portfolio site [(link_to_your_site)](https://haveatrytolearn.github.io/first_task/index.html)
+[(My_portfolio_site)](https://haveatrytolearn.github.io/first_task/index.html)
 ​
 ## Project Requirements
 
