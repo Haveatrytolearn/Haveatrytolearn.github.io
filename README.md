@@ -32,6 +32,7 @@ In addition, each field in the contact form is designed to show visual validatio
 On the second page, the same navigation bar and footer elements are reused for consistency. The main content of this page consists of project description cards, each containing a button that will eventually lead to a separate page with the completed project.
 ​
 ### Screenshots
+
 1. Homepage layout
 ![First web page](./img/First_page.jpg)
 
