@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
@@ -15,6 +16,7 @@
             <li><a href="https://github.com/Haveatrytolearn">GitHub</a></li>
         </ul>
     </nav>
+    </header>
     <main>
     <section class="intro-section">
     <h1>Maria Alistratova</h1>
@@ -23,8 +25,9 @@
     <img src="./img/maria-photo.jpg" alt="Photo of Maria Alistratova">
   </div>  
   </section> 
+  <section class="BIO">
     <p>Hi! My name is Maria Alistratova, and I’m passionate about technology and innovation. I have an overseas legal background, but my experience in legal tech opened the door for me to the world of IT. I’m currently learning web development and programming with She Codes, exploring how to build websites, write clean and efficient code, and create practical tech projects. My goal is to combine my analytical and problem-solving skills from law with new technical knowledge to develop useful, creative, and human-centered digital solutions. Here, I’ll be sharing my projects in Python, JavaScript, HTML, CSS, and other technologies as I continue to grow in the tech field 😊</p>
-   
+   </section>
  <section class="contact-form">
      <h2>Get in touch</h2>
      <form>
@@ -55,31 +58,6 @@
   <input type="text" id="other-country" name="other-country" placeholder="Type country name">
 </div>
 
-<script>
-  function toggleOtherCountry() {
-    const select = document.getElementById("country");
-    const otherContainer = document.getElementById("other-country-container");
-    
-    // Check if "Another country" is selected
-    if (select.value === "other") {
-      otherContainer.style.display = "block";   // показываем элемент
-      setTimeout(() => {
-        otherContainer.style.opacity = "1";     // добавляем плавность
-      }, 10); // короткая задержка, чтобы анимация успела сработать
-    } else {
-      otherContainer.style.opacity = "0";       // плавно скрываем
-      setTimeout(() => {
-        otherContainer.style.display = "none";  // убираем из потока после анимации
-      }, 500); // длительность должна совпадать с transition в CSS
-    }
-  }
-
-  // set initial state on load
-  document.addEventListener("DOMContentLoaded", toggleOtherCountry);
-</script>
-  
-        
-
     <label for="city">City</label>
     <input type="text" id="city" name="city">
 
@@ -88,7 +66,7 @@
     
     <label for="message">Your Message</label>
     <textarea name="message-text" id="message" rows="5"></textarea>
-    <input type="submit" value="Submit">
+    <button type="submit">Submit</button>
      </form>
  </section>
   </main>
@@ -107,4 +85,26 @@
      </a>
  </footer> 
 </body>
+ <script>
+  function toggleOtherCountry() {
+    const select = document.getElementById("country");
+    const otherContainer = document.getElementById("other-country-container");
+    
+    // Check if "Another country" is selected
+    if (select.value === "other") {
+      otherContainer.style.display = "block";   // show element
+      setTimeout(() => {
+        otherContainer.style.opacity = "1";     // add smoothness
+      }, 10); // short delay
+    } else {
+      otherContainer.style.opacity = "0";       // gradually hide
+      setTimeout(() => {
+        otherContainer.style.display = "none";  // remove after animation
+      }, 500); // the duration must match with transition в CSS
+    }
+  }
+
+  // set initial state on load
+  document.addEventListener("DOMContentLoaded", toggleOtherCountry);
+</script>
 </html>

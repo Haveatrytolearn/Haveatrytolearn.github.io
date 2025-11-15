@@ -17,21 +17,22 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #ffffff; /* Белый фон для контента */
+  background-color: #ffffff; /* White background */
   color: #333333;
   line-height: 1.6;
+  padding: 70 80px 60px;
 }
 
 /* ===== Navigation ===== */
 .navbar {
-  background-color: #2b2b35; /* Тёмная полоса */
+  background-color: #2b2b35; 
   width: 100%;
   padding: 20px 40px;
-  position: fixed; /* Закрепляем сверху */
+  position: fixed; /*On top */
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Мягкая тень под навбаром */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
 }
 
 /* ===== Links ===== */
@@ -78,7 +79,7 @@ body {
 
 /* ===== Content ===== */
 main {
-  padding: 140px 80px 60px; /* the same as padding navbar */
+  padding: 60px 80px 30px; 
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -160,6 +161,7 @@ p {
 }
 
 .contact-form input,
+.contact-form button,
 .contact-form select {
   display: block;
   width: 100%;
@@ -182,15 +184,26 @@ p {
   margin-bottom: 16px;
 }
 
-.contact-form input[type="submit"] {
+.contact-form button[type="submit"] {
   background-color: var(--action);
   border: 0;
   margin-top: 8px;
   cursor: pointer;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+.contact-form button[type="submit"]:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
 /*Highlighting settings*/
 /* Base settings */
-input {
+input,
+button {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -199,7 +212,8 @@ input {
 }
 
 /* When it's correct */
-input:valid {
+input:valid,
+button:valid {
   border-color: #4CAF50;
   box-shadow: 0 0 4px #4CAF50;
 }
@@ -238,19 +252,29 @@ footer {
   justify-content: space-around;
 }
 
+/* basic icon style */
 .socials-icon {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
+/* hover over effect works on all screens */
+.socials-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(68, 209, 222, 0.4); /* Tiffany glow */
+}
+
+/* settings for big screens */
 @media (min-width: 768px) {
   footer {
-      justify-content: center;
+    justify-content: center;
   }
 
   footer .socials-icon {
-      margin-left: 20px;
-      margin-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 /*======Second page========*/
@@ -262,23 +286,30 @@ footer {
    text-decoration: none;
    color: var(--base-dark);
    border-radius: 6px;
-   text-decoration: none;  /* убирает подчеркивание */
+   text-decoration: none;  /* remove underlining */
    background-color: var(--action);
    transition: all 0.3s ease;
    text-align: center;
-   margin: 0 auto; /* центрирует кнопку */
+   margin: 0 auto; /* center the button */
  }
  
  .btn-primary:hover {
    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
    transform: translateY(-4px);
  }
-/* .projects-container  */
+
+/* desctop: two cards in a row */
 @media (min-width: 768px) {
   .projects-container {
     display: flex;
+    flex-wrap: wrap;        /* allow the transfer */
+    gap: 24px;              /* space between cards */
     margin-top: 60px;
-    
+  }
+.projects-container article {
+    flex: 0 0 calc(50% - 24px); /* two cards in a raw */
+    margin: 0;                 
+    padding: 40px 24px;
   }
 }
 
@@ -286,7 +317,7 @@ article {
   padding: 20px 16px;
   background-color: var(--base-light);
   border-radius: 10px;
-  margin: 60px 20px;
+  margin: 20px 10px;
   transition: all 0.3s ease;
   text-align: center; /* center the button */
 }
