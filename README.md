@@ -1,4 +1,4 @@
-Maria Alistratova - [(My_portfolio_site)](https://github.com/Haveatrytolearn/Haveatrytolearn.github.io/blob/main/project.html)
+Maria Alistratova - [(My_portfolio_site)](https://github.com/Haveatrytolearn/Haveatrytolearn.github.io/blob/main/index.html)
 ​
 ## Project Requirements
 
