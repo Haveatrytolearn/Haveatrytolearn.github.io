@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maria">
+    <title>My first website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index2.html">Projects</a></li>
+            <li><a href="https://github.com/Haveatrytolearn">GitHub</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+    <section class="intro-section">
+    <h1>Maria Alistratova</h1>
+ <!-- Personal photo -->
+  <div class="profile-photo">
+    <img src="./img/maria-photo.jpg" alt="Photo of Maria Alistratova">
+  </div>  
+  </section> 
+  <section class="BIO">
+    <p>Hi! My name is Maria Alistratova, and I’m passionate about technology and innovation. I have an overseas legal background, but my experience in legal tech opened the door for me to the world of IT. I’m currently learning web development and programming with She Codes, exploring how to build websites, write clean and efficient code, and create practical tech projects. My goal is to combine my analytical and problem-solving skills from law with new technical knowledge to develop useful, creative, and human-centered digital solutions. Here, I’ll be sharing my projects in Python, JavaScript, HTML, CSS, and other technologies as I continue to grow in the tech field 😊</p>
+   </section>
+ <section class="contact-form">
+     <h2>Get in touch</h2>
+     <form>
+         <label for="full_name">Full Name</label>
+         <input type="text" id="full_name"
+         pattern="^[A-Za-z]+(\s+[A-Za-z]+)+$"
+         title="Please enter at least two words (first and last name)"
+         required>
+         
+         <label for="country">Choose a country:</label>
+         <select id="country" name="country" onchange="toggleOtherCountry()">
+            <option value="">-- Select a country --</option>
+            <option value="AU">Australia</option>
+            <option value="CA">Canada</option>
+            <option value="CN">China</option>
+            <option value="IN">India</option>
+            <option value="JP">Japan</option>
+            <option value="NZ">New Zealand</option>
+            <option value="RU">Russian Federation</option>
+            <option value="SG">Singapore</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US">United States of America</option>
+            <option value="other">Another country</option>
+        </select>
+
+        <div id="other-country-container" style="display:none; opacity:0; transition:opacity 0.5s ease;">
+  <label for="other-country">Enter another country:</label>
+  <input type="text" id="other-country" name="other-country" placeholder="Type country name">
+</div>
+
+    <label for="city">City</label>
+    <input type="text" id="city" name="city">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    
+    <label for="message">Your Message</label>
+    <textarea name="message-text" id="message" rows="5"></textarea>
+    <button type="submit">Submit</button>
+     </form>
+ </section>
+  </main>
+ <footer>
+     <a href="https://www.instagram.com/mariaalistratova/" title="@mariaalistratova on Instagram">
+         <img class="socials-icon" src="./img/instagram.svg"
+             alt="The Instagram logo: a rounded square camera with a purple-orange gradient filling the lines" />
+     </a>
+     <a
+         href="https://www.linkedin.com/in/maria-alistratova/">
+         <img class="socials-icon" src="./img/linkedin-svgrepo-com.svg" alt="The LinkedIn logo" />
+     </a>
+     <a href="https://www.facebook.com/maria.alistratova.3/">
+         <img class="socials-icon" src="./img/facebook-logo.svg"
+             alt="The Facebook logo" />
+     </a>
+ </footer> 
+</body>
+ <script>
+  function toggleOtherCountry() {
+    const select = document.getElementById("country");
+    const otherContainer = document.getElementById("other-country-container");
+    
+    // Check if "Another country" is selected
+    if (select.value === "other") {
+      otherContainer.style.display = "block";   // show element
+      setTimeout(() => {
+        otherContainer.style.opacity = "1";     // add smoothness
+      }, 10); // short delay
+    } else {
+      otherContainer.style.opacity = "0";       // gradually hide
+      setTimeout(() => {
+        otherContainer.style.display = "none";  // remove after animation
+      }, 500); // the duration must match with transition в CSS
+    }
+  }
+
+  // set initial state on load
+  document.addEventListener("DOMContentLoaded", toggleOtherCountry);
+</script>
+</html>

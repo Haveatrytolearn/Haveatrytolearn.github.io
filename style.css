@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --brand: #44d1de;
+  --action: #d5f3eb;
+  --white: #ffffff;
+  --base-light: #b5dfdf;
+  --base-dark: #333333;
+  --black: #111111;
+}
+
+/* ===== General settings ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #333333;
+  line-height: 1.6;
+  padding: 70 80px 60px;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+  background-color: #2b2b35; 
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed; /*On top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+/* ===== Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+/* Highlighting when hovering over */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #44d1de; /* Tiffany line */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active webpage */
+.nav-links a.active {
+  font-weight: bold;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===== Content ===== */
+main {
+  padding: 60px 80px 30px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2.2rem;
+  color: #434141;
+   margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.4rem;
+  color: #434141;
+   margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+/*======Photo======*/
+/* Layout for name (left) + photo (right) */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;           /* photo drops below on small screens */
+  margin: 20px 0 30px;
+}
+
+.profile-photo {
+  /* no text-align needed when using flex */
+}
+
+.profile-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Make image a bit smaller on mobile */
+@media (max-width: 600px) {
+  .profile-photo img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* ===== Adaptationa for mobile devices ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  main {
+    padding: 120px 30px 40px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+/* .contact-form */
+.contact-form {
+  padding: 48px 16px;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+
+.contact-form input,
+.contact-form button,
+.contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form h2 {
+  margin-bottom: 16px;
+}
+
+.contact-form button[type="submit"] {
+  background-color: var(--action);
+  border: 0;
+  margin-top: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.contact-form button[type="submit"]:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/*Highlighting settings*/
+/* Base settings */
+input,
+button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When it's correct */
+input:valid,
+button:valid {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px #4CAF50;
+}
+
+/* When it's wrong */
+input:invalid {
+  border-color: #E53935;
+  box-shadow: 0 0 4px #E53935;
+}
+
+/* When user focuses on the field */
+input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 5px #2196F3;
+}
+
+
+@media (min-width: 768px) {
+  .contact-form h2 {
+      text-align: center;
+      font-size: 2.5rem;
+  }
+
+  .contact-form form {
+      max-width: 60%;
+      margin: 40px auto;
+  }
+}
+
+/* footer */
+footer {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* basic icon style */
+.socials-icon {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+/* Apply hover effect to the parent anchor tag */
+footer a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover over effect works on all screens */
+footer a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(68, 209, 222, 0.4); /* Tiffany glow */
+}
+
+/* settings for big screens */
+@media (min-width: 768px) {
+  footer {
+    justify-content: center;
+  }
+
+  footer .socials-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+/*======Second page========*/
+
+/* btn-primary */
+ .btn-primary {
+   display: inline-block;
+   padding: 12px 16px;
+   text-decoration: none;
+   color: var(--base-dark);
+   border-radius: 6px;
+   text-decoration: none;  /* remove underlining */
+   background-color: var(--action);
+   transition: all 0.3s ease;
+   text-align: center;
+   margin: 0 auto; /* center the button */
+ }
+ 
+ .btn-primary:hover {
+   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+   transform: translateY(-4px);
+ }
+
+/* desctop: two cards in a row */
+@media (min-width: 768px) {
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;        /* allow the transfer */
+    gap: 24px;              /* space between cards */
+    margin-top: 60px;
+  }
+.projects-container article {
+    flex: 0 0 calc(50% - 24px); /* two cards in a raw */
+    margin: 0;                 
+    padding: 40px 24px;
+  }
+}
+
+article {
+  padding: 20px 16px;
+  background-color: var(--base-light);
+  border-radius: 10px;
+  margin: 20px 10px;
+  transition: all 0.3s ease;
+  text-align: center; /* center the button */
+}
+
+@media (min-width: 768px) {
+  article {
+      padding: 56px;
+  }
+}
+
+article:hover {
+  filter: contrast(150%);
+}
