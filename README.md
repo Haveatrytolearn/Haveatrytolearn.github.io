@@ -33,33 +33,33 @@ On the second page, the same navigation bar and footer elements are reused for c
 ​
 ### Screenshots
 
-##1. Homepage layout
+## 1. Homepage layout
 
 ![First web page](./img/First_page.jpg)
 
-##2. Projects page layout
+## 2. Projects page layout
 
 ![Second web page](./img/Second_page.jpg)
 
-##3. Navigation menu displayed on every page
+## 3. Navigation menu displayed on every page
 ![Navigation menu](./img/Nav%20menu.jpg)
 
-##4. Introduction section with profile photo
+## 4. Introduction section with profile photo
 
 ![Intro section](./img/Intro%20section%20with%20photo.jpg)
 
-##5. Default view of the contact form
+## 5. Default view of the contact form
 
 ![Contact form1](./img/Contact%20form%201.jpg)
 
-##6. Contact form with the additional field shown when “Another country” is selected
+## 6. Contact form with the additional field shown when “Another country” is selected
 
 ![Contact form2](./img/Contact%20form2.jpg)
 
-##7. Social media icons section
+## 7. Social media icons section
 
 ![Social media icons](./img/Social%20media%20icons.jpg)
 
-##8. Project cards on the second page
+## 8. Project cards on the second page
 
 ![Project cards](./img/Project%20cards.jpg)
