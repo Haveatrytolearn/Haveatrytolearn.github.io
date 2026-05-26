@@ -30,9 +30,9 @@
    </section>
  <section class="contact-form">
      <h2>Get in touch</h2>
-     <form>
+     <form id="feedbackForm" method="post">
          <label for="full_name">Full Name</label>
-         <input type="text" id="full_name"
+         <input type="text" id="full_name" name="full_name"
          pattern="^[A-Za-z]+(\s+[A-Za-z]+)+$"
          title="Please enter at least two words (first and last name)"
          required>
@@ -67,6 +67,7 @@
     <label for="message">Your Message</label>
     <textarea name="message-text" id="message" rows="5"></textarea>
     <button type="submit">Submit</button>
+    <div id="submitMessage" style="margin-top: 10px; padding: 10px; border-radius: 5px; display: none;"></div>
      </form>
  </section>
   </main>
@@ -83,28 +84,99 @@
          <img class="socials-icon" src="./img/facebook-logo.svg"
              alt="The Facebook logo" />
      </a>
- </footer> 
-</body>
- <script>
+ </footer>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyADEtZoEm3cxqfRXXopUY5i3m8ZVFyCuZU",
+    authDomain: "mariacodes-portfolio.firebaseapp.com",
+    projectId: "mariacodes-portfolio",
+    storageBucket: "mariacodes-portfolio.firebasestorage.app",
+    messagingSenderId: "1033892969963",
+    appId: "1:1033892969963:web:d6d167c8ec71eb3cb5adae",
+    measurementId: "G-FREN0B0MZJ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
   function toggleOtherCountry() {
     const select = document.getElementById("country");
     const otherContainer = document.getElementById("other-country-container");
-    
-    // Check if "Another country" is selected
+
     if (select.value === "other") {
-      otherContainer.style.display = "block";   // show element
+      otherContainer.style.display = "block";
       setTimeout(() => {
-        otherContainer.style.opacity = "1";     // add smoothness
-      }, 10); // short delay
+        otherContainer.style.opacity = "1";
+      }, 10);
     } else {
-      otherContainer.style.opacity = "0";       // gradually hide
+      otherContainer.style.opacity = "0";
       setTimeout(() => {
-        otherContainer.style.display = "none";  // remove after animation
-      }, 500); // the duration must match with transition в CSS
+        otherContainer.style.display = "none";
+      }, 500);
     }
   }
 
-  // set initial state on load
-  document.addEventListener("DOMContentLoaded", toggleOtherCountry);
+  window.toggleOtherCountry = toggleOtherCountry;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    toggleOtherCountry();
+
+    const form = document.getElementById("feedbackForm");
+    const messageDiv = document.getElementById("submitMessage");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitBtn = form.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      const selectedCountry = document.getElementById("country").value;
+
+      const formData = {
+        full_name: document.getElementById("full_name").value,
+        country: selectedCountry === "other"
+          ? document.getElementById("other-country").value
+          : selectedCountry,
+        city: document.getElementById("city").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+        created_at: serverTimestamp()
+      };
+
+      try {
+        await addDoc(collection(db, "contact-form"), formData);
+
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "#d4edda";
+        messageDiv.style.color = "#155724";
+        messageDiv.textContent = "Thank you! Your message has been sent successfully.";
+
+        form.reset();
+        toggleOtherCountry();
+      } catch (error) {
+        console.error("Error sending message:", error);
+
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "#f8d7da";
+        messageDiv.style.color = "#721c24";
+        messageDiv.textContent = "Error sending message. Please try again.";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
+    });
+  });
 </script>
+
+</body>
 </html>
