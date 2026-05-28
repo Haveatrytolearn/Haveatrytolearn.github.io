@@ -1,4 +1,4 @@
-Maria Alistratova - [(My_portfolio_site)](https://haveatrytolearn.github.io/)
+Maria Alistratova - [(My_portfolio_site)](https://www.mariacodes.dev/)
 ​
 ## Project Requirements
 
@@ -30,6 +30,13 @@ I also implemented a dropdown list of countries in the contact form, allowing us
 In addition, each field in the contact form is designed to show visual validation feedback: fields turn green when the input is correct and red when it is invalid. The Full Name field has a rule requiring users to enter at least two words.
 
 On the second page, the same navigation bar and footer elements are reused for consistency. The main content of this page consists of project description cards, each containing a button that will eventually lead to a separate page with the completed project.
+
+### Firebase (Contact messages)
+
+This site uses Firebase Firestore to collect and store messages submitted through the contact form. When a visitor fills out the form on the `index.html` page and clicks Submit, the form data (name, country, city, email, message, and timestamp) is saved to a `feedback` collection in Firestore. You can view and manage all submissions in the Firebase Console under Firestore Database.
+
+Additionally, the contact form is configured to send each submission to my email using EmailJS. This ensures I receive instant email notifications for new messages and can respond to them promptly. (EmailJS settings — service ID, template ID, and user/public key — are managed in the EmailJS dashboard and referenced from the site JavaScript.)
+
 ​
 ### Screenshots
 

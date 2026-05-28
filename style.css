@@ -86,18 +86,54 @@ main {
 h1 {
   font-size: 2.2rem;
   color: #434141;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 h2 {
   font-size: 1.4rem;
   color: #434141;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #434141;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 1rem;
   text-align: justify;
+  margin-top: 10px;
 }
+
+/* Technologies list — multi-column layout */
+.tech-stack {
+  list-style: none;
+  padding: 0;
+  column-count: 3;
+  column-gap: 2rem;
+  margin: 20px 0;
+}
+
+.tech-stack li {
+  padding: 8px 0;
+  break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-stack {
+    column-count: 1;
+  }
+}
+
 /*======Photo======*/
 /* Layout for name (left) + photo (right) */
 .intro-section {
@@ -172,7 +208,15 @@ p {
 .contact-form textarea {
   display: block;
   width: 100%;
-  padding: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+  font-size: 1rem;
+  line-height: 1.4;
+  resize: vertical;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
 }
 
 .contact-form label {
@@ -186,11 +230,11 @@ p {
 
 .contact-form button[type="submit"] {
   background-color: var(--action);
-  border: 0;
-  margin-top: 8px;
+  border: 3;
+  margin-top: 12px;
   cursor: pointer;
   display: block;
-  width: 100%;
+  width: auto;
   border-radius: 10px;
   font-size: 1rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -198,6 +242,13 @@ p {
 .contact-form button[type="submit"]:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}
+
+button[type="submit"].btn-submit {
+  width: 12rem;
+  max-width: 100%;
+  margin: 12px auto 0;
+  display: block;
 }
 
 /*Highlighting settings*/
@@ -231,6 +282,13 @@ input:focus {
   box-shadow: 0 0 5px #2196F3;
 }
 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 6px 18px rgba(68,209,222,0.12);
+  transform: translateY(-1px);
+}
+
 
 @media (min-width: 768px) {
   .contact-form h2 {
@@ -246,10 +304,30 @@ input:focus {
 
 /* footer */
 footer {
-  padding: 16px;
+  background: linear-gradient(135deg, #2b2b35 0%, #1a1a1e 100%);
+  border-top: 2px solid var(--brand);
+  padding: 48px 20px;
+  margin-top: 60px;
   text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer h3 {
+  color: #f5f5f5;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.socials-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
 }
 
 /* basic icon style */
@@ -271,15 +349,20 @@ footer a:hover {
   box-shadow: 0 8px 16px rgba(68, 209, 222, 0.4); /* Tiffany glow */
 }
 
+.footer-text {
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 /* settings for big screens */
 @media (min-width: 768px) {
   footer {
-    justify-content: center;
+    padding: 60px 40px;
   }
 
-  footer .socials-icon {
-    margin-left: 20px;
-    margin-right: 20px;
+  .socials-container {
+    gap: 48px;
   }
 }
 /*======Second page========*/
@@ -296,6 +379,7 @@ footer a:hover {
    transition: all 0.3s ease;
    text-align: center;
    margin: 0 auto; /* center the button */
+   margin-top: auto; /* push to the bottom of the card when parent is flex column */
  }
  
  .btn-primary:hover {
@@ -314,7 +398,9 @@ footer a:hover {
 .projects-container article {
     flex: 0 0 calc(50% - 24px); /* two cards in a raw */
     margin: 0;                 
-    padding: 40px 24px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
   }
 }
 
