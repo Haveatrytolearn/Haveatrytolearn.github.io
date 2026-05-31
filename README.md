@@ -1,43 +1,77 @@
-Maria Alistratova - [(My_portfolio_site)](https://www.mariacodes.dev/)
+## MariaCodes Portfolio Website Maria Alistratova 
+Personal portfolio website showcasing my transition into software development, technical projects, and professional background.
+
+🌐 Live Site: [(My_portfolio_site)](https://www.mariacodes.dev/)
 ​
-## Project Requirements
+### Overview
 
-### Content
-
-My website features a personal profile with a photograph and a brief biography, an interactive contact form, and a dedicated projects page showcasing my work through individual project cards. It also includes direct links to my GitHub, Facebook, LinkedIn, and Instagram profiles.
+This responsive portfolio website was designed and developed to present my software development projects, technical skills, and professional experience. The site serves as a central hub where potential employers, recruiters, and collaborators can learn more about my work and easily get in touch.
 ​
-### Technical
-This website consists of two separate pages. During development, I used Git for version control and regularly committed updates to track my progress. The site is deployed through GitHub Pages, making it accessible online. The layout is fully responsive, ensuring that it displays and functions correctly on both desktop and mobile devices.
-When creating the structure of the site, I used several semantic HTML elements, including:
+### Key Features
 
-- header — used for the site’s header, which contains the navigation menu.
+- Responsive design for desktop and mobile devices
+- Professional "About Me" section
+- Dedicated Projects page featuring portfolio projects
+- Interactive contact form with real-time validation
+- Country selector with dynamic custom-country input
+- Social media and GitHub integration
+- Hover animations and interactive UI elements
+- Email notifications for contact form submissions
+- Firebase Firestore database integration
 
-- nav — used to define the main site navigation so browsers and search engines can easily identify it.
+### Technologies Used
 
-- main — used to mark the primary content of the page.
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Firebase Firestore
+- EmailJS
+- Git & GitHub
+- Responsive Web Design
 
-- section — used to group the content into meaningful blocks (intro, biography, contact form, projects).
+### Featured Projects
 
-- article — used for individual project cards, each representing a standalone piece of information.
+#### JobTracker
 
-- footer — used for the bottom section of the page, which includes links to social media.
+A collaborative job application management platform featuring Kanban boards, interview tracking, calendar scheduling, contacts, notes, and task management.
 
-### Bonus (optional)
-Among the interactive features of the website, the navigation menu stands out: the Home, Projects, and GitHub links are highlighted with a green underline when hovered over. On the Home page, several elements include hover animations — the profile photo, the Submit button, and the social media icons all slightly enlarge when the cursor moves over them.
+#### Fundraising Platform
 
-I also implemented a dropdown list of countries in the contact form, allowing users to select their location. If the required country is not listed, the user can choose the “Another country” option, which triggers the appearance of an additional input field for entering a custom country name. The conditional display of this field was achieved using JavaScript.
+A full-stack crowdfunding platform with user authentication, initiative management, donation tracking, and administrative controls.
 
-In addition, each field in the contact form is designed to show visual validation feedback: fields turn green when the input is correct and red when it is invalid. The Full Name field has a rule requiring users to enter at least two words.
+#### Weather Analytics Application
 
-On the second page, the same navigation bar and footer elements are reused for consistency. The main content of this page consists of project description cards, each containing a button that will eventually lead to a separate page with the completed project.
+A Python-based weather reporting tool that processes CSV datasets and generates weather reports through an interactive web interface.
 
-### Firebase (Contact messages)
+#### Task Manager
 
-This site uses Firebase Firestore to collect and store messages submitted through the contact form. When a visitor fills out the form on the `index.html` page and clicks Submit, the form data (name, country, city, email, message, and timestamp) is saved to a `feedback` collection in Firestore. You can view and manage all submissions in the Firebase Console under Firestore Database.
+A JavaScript productivity application with task creation, deadline tracking, editing, and completion management.
 
-Additionally, the contact form is configured to send each submission to my email using EmailJS. This ensures I receive instant email notifications for new messages and can respond to them promptly. (EmailJS settings — service ID, template ID, and user/public key — are managed in the EmailJS dashboard and referenced from the site JavaScript.)
+### Contact Form Integration
 
-​
+The website uses Firebase Firestore to securely store contact form submissions and EmailJS to deliver instant email notifications whenever a visitor submits a message.
+
+### What I Learned
+
+This project strengthened my skills in:
+
+- Front-end development
+- Responsive design
+- Form validation
+- Firebase integration
+- Third-party API integration
+- User experience design
+- Git version control
+- Website deployment
+
+### Author
+
+Maria Alistratova
+
+Portfolio:  [(My_portfolio_site)](https://www.mariacodes.dev/)
+GitHub: [(My_GitHub)](https://github.com/Haveatrytolearn)
+LinkedIn: [(My_LinkedIn)](https://www.linkedin.com/in/maria-alistratova/)
+
 ### Screenshots
 
 #### 1. Homepage layout
