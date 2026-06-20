@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Maria">
-    <title>MariaCodes Portfolio</title>
+    <title>Software Development Projects | React, Django, Python Portfolio | Maria Alistratova</title>
+
+    <meta
+    name="description"
+    content="Software development portfolio featuring React, Django, Python and JavaScript projects including a Job Application Tracker, Fundraising Platform, Weather Analytics Application and Task Manager."
+    >
+
+    <meta
+    name="keywords"
+    content="React projects, Django projects, Python projects, JavaScript portfolio, full stack developer portfolio, Job Tracker, Fundraising Platform, software developer Sydney"
+    >
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./img/favicon.png">
 
@@ -24,27 +35,100 @@
         </ul>
     </nav>
     <main>
+      <section class="projects-intro">
+        <br>
+
+        <h3>Software Development Projects</h3>
+
+        <p>
+        A collection of full-stack web applications and software development projects built using React, JavaScript, Python, Django, REST APIs, Firebase, HTML, CSS, GitHub and Git.
+
+        These projects demonstrate my experience in frontend development, backend development, database integration, user authentication, data processing and business-focused software solutions.
+        </p>
+
+      </section>
     <section class="projects-container">
-        <article>
-            <h2> JobTracker</h2>
-            <p>A collaborative job application tracker developed as part of a group project, including an interactive Kanban board, calendar scheduling, interview pipeline tracking, contact management, notes, tasks, and collaborative workflow features designed around real client requirements.</p>
-            <a href="https://jobtrackerpenguins.netlify.app/" class="btn-primary">Explore Project</a>
+        <article class="full-width project-card">
+            <div class="project-text">
+              <h2>JobTracker</h2>
+              <h5>Full-Stack React & Django Job Application Management System</h5>
+              <p>JobTracker is a collaborative full-stack job application management system developed as part of a team software project using React, JavaScript, Python, Django and REST APIs.</p>
+              <p>The application helps users manage job applications through a Kanban board, interview pipeline tracking, calendar scheduling, contact management, task management, notes and collaborative workflow features designed around real client requirements.</p>
+              <p>My main contribution was backend development, including building core application logic, supporting API functionality and working with the Django backend structure. On the frontend, I integrated components developed by team members, connected different parts of the interface, improved consistency across pages and helped align the overall design and user experience.</p>
+              <img class="inline-image" src="./img/JobTracker.jpg" alt="JobTracker screenshot" />
+              <h3>Key Features</h3>
+              <ul>
+                <li>Kanban board for job application tracking</li>
+                <li>Interview pipeline and calendar scheduling</li>
+                <li>Contact, note and task management</li>
+                <li>Django backend and REST API functionality</li>
+                <li>GitHub team workflow with branches, pull requests and code reviews</li>
+              </ul>
+              <p>Technologies: React, JavaScript, Python, Django, REST API, GitHub, Git, HTML, CSS, Netlify deployment and Agile development practices.</p>
+              <br>
+              <a href="https://jobtrackerpenguins.netlify.app/" class="btn-primary">Explore Project</a>
+            </div>
+            <div class="project-image">
+              <img src="./img/JobTracker.jpg" alt="JobTracker screenshot" />
+            </div>
         </article>
-        <article>
-            <h2> Fundraising Platform</h2>
-            <p>A full-stack fundraising platform featuring user authentication, initiative creation, donation tracking, fund management, administrative dashboards, soft-delete recovery functionality, and role-based admin controls.</p>
-            <a href="https://generousource.netlify.app/" class="btn-primary">Explore Project</a>
+        <article class="full-width project-card">
+            <div class="project-text">
+              <h2>Fundraising Platform</h2>
+              <h5>Full-Stack React & Django Fundraiser Application</h5>
+              <p>The Fundraising Platform is a full-stack web application built independently using React, JavaScript, Python, Django and REST APIs.</p>
+              <p>The platform is designed to support fundraising initiatives and can be adapted for different projects, organisations or community campaigns. It allows regular users to browse initiatives, create fundraising content, manage donations and track campaign progress.</p>
+              <p>The application also includes a dedicated admin interface that allows administrators to manage users, fundraising initiatives, funds, donation-related records and platform content. This makes the project suitable as a reusable foundation for different fundraising or community support platforms.</p>
+              <div class="inline-image-row">
+                <img class="inline-image" src="./img/Fundraiser_1.jpg" alt="Fundraiser home page screenshot" />
+                <img class="inline-image" src="./img/Fundraiser_2.jpg" alt="Fundraiser initiative screenshot" />
+              </div>
+              <h3>Key Features</h3>
+              <ul>
+                <li>User authentication and role-based access control</li>
+                <li>Fundraising initiative creation and management</li>
+                <li>Donation tracking and fund management</li>
+                <li>Admin dashboard for managing users, funds and platform content</li>
+                <li>Soft-delete recovery functionality and responsive web design</li>
+              </ul>
+              <p>Technologies: React, JavaScript, Python, Django, REST API, HTML, CSS, GitHub and Netlify deployment.</p>
+              <br>
+              <a href="https://generousource.netlify.app/" class="btn-primary">Explore Project</a>
+            </div>
+            <div class="project-image">
+              <img src="./img/Fundraiser_1.jpg" alt="Fundraising Platform screenshot" />
+            </div>
         </article>
     </section>
     <section class="projects-container">
         <article>
-            <h2>Weather Project</h2>
+            <h2>Weather Analytics Application</h2>
+            <h5>Python Data Processing Project</h5>
             <p>A weather analytics application built with Python that processes CSV weather datasets and generates reports based on selected date ranges, transformed into an interactive single-page web interface.</p>
+            <img class="inline-image" src="./img/Wheather.jpg" alt="Weather Project screenshot" />
+            <h3>Key Features</h3>
+            <ul>
+              <li>CSV weather data processing</li>
+              <li>Date range selection</li>
+              <li>Generated weather reports</li>
+              <li>Interactive web interface</li>
+            </ul>
+            <p>Technologies: Python, CSV data processing, HTML, CSS, JavaScript, GitHub and Heroku deployment.</p>
             <a href="https://weather-python-project-15ced61538aa.herokuapp.com/" class="btn-primary">Explore Project</a>
         </article>
         <article>
-            <h2> Task Manager</h2>
-            <p>A JavaScript task management application with task creation, deadlines, completion tracking, editing, and task removal functionality.</p>
+            <h2>Task Manager</h2>
+            <h5>JavaScript Productivity Application</h5>
+            <p>A JavaScript task management application that allows users to create, edit, organise and remove tasks while tracking deadlines and completion status.</p>
+            <img class="inline-image" src="./img/Task_manager.jpg" alt="Task Manager screenshot" />
+            <h3>Key Features</h3>
+            <ul>
+              <li>Task creation and editing</li>
+              <li>Deadline tracking</li>
+              <li>Task completion status</li>
+              <li>Task removal functionality</li>
+            </ul>
+            <p>Technologies: JavaScript, HTML, CSS, GitHub and GitHub Pages deployment.</p> <br>
             <a href="https://haveatrytolearn.github.io/task-manager/" class="btn-primary">Explore Project</a>
         </article>
     </section>
