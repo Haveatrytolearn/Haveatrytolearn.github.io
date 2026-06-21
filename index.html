@@ -84,10 +84,7 @@
      <h2>Get in touch</h2>
      <form id="feedbackForm" method="post">
          <label for="full_name">Full Name</label>
-         <input type="text" id="full_name" name="full_name"
-         pattern="^[A-Za-z]+(\s+[A-Za-z]+)+$"
-         title="Please enter at least two words (first and last name)"
-         required>
+         <input type="text" id="full_name" name="full_name" required>
          
          <label for="country">Your country:</label>
          <select id="country" name="country" onchange="toggleOtherCountry()">
@@ -118,7 +115,7 @@
     
     <label for="message">Your Message</label>
     <textarea name="message-text" id="message" rows="5"></textarea>
-    <button type="submit" class="btn-submit">Submit</button>
+    <button type="submit" class="btn-primary">Submit</button>
     <div id="submitMessage" style="margin-top: 10px; padding: 10px; border-radius: 5px; display: none;"></div>
      </form>
  </section>
